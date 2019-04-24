@@ -1,0 +1,41 @@
+/* CSS Hacks. Scrollbars, placeholders etc. */
+@import "lib-components/css-hacks";
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px
+);
+
+/* Bootstrap */
+@import '../libs/bootstrap-4.3.1/scss/bootstrap-grid.scss';
+
+$light: #dddddd;
+
+
+@import '../libs/bootstrap-4.3.1/scss/utilities/_spacing.scss';
+// @import '../libs/bootstrap-4.3.1/scss/mixins/_text-truncate.scss';
+// @import '../libs/bootstrap-4.3.1/scss/mixins/_hover.scss';
+// @import '../libs/bootstrap-4.3.1/scss/mixins/_deprecate.scss';
+// @import '../libs/bootstrap-4.3.1/scss/mixins/_text-hide.scss';
+// @import '../libs/bootstrap-4.3.1/scss/mixins/_text-emphasis.scss';
+// @import '../libs/bootstrap-4.3.1/scss/utilities/_text.scss';
+
+// Responsive alignment
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .text#{$infix}-left   { text-align: left !important; }
+    .text#{$infix}-right  { text-align: right !important; }
+    .text#{$infix}-center { text-align: center !important; }
+  }
+}
+
+/*=====full page=====*/
+@import '../libs/fullPage.js-master/fullpage.css';
+
+// /*=====slick slide=====*/
+ @import '../libs/slick-1.8.1/slick/slick.scss';
