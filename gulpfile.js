@@ -35,6 +35,7 @@ gulp.task('createJsLibs', function(){
 	return gulp.src([
 			'src/libs/fullPage.js-master/fullpage.min.js',
 			'src/libs/slick-1.8.1/slick/slick.min.js',
+			'src/libs/lightbox/dist/js/lightbox.min.js',
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglifyjs())
@@ -57,30 +58,31 @@ gulp.task('compressJs', function(){
 
 gulp.task('code', function(){
 	return gulp.src([
-			'src/**/*.{php, html}'
+			'*.{php, html}'
 		])
 	.pipe(browserSync.reload({stream: true}));
 });
 
 // LiveReload
-// gulp.task('browserSync', function serverStart(){
-// 	browserSync.init({
-// 		proxy: "shana"
-// 	});
-// });
-gulp.task('browserSync', function() {
-    browserSync.init({
-        watch: true,
-    	server: "./src/"
-    });
+gulp.task('browserSync', function serverStart(){
+	browserSync.init({
+		proxy: "tekton.loc/"
+	});
 });
+// });
+// gulp.task('browserSync', function() {
+//     browserSync.init({
+//         watch: true,
+//     	server: "http://tekton/"
+//     });
+// });
 
 
 // Watch
 gulp.task('watch', gulp.parallel('code', 'compileSass', 'createJsLibs', 'compressJs', 'browserSync', function startWatching(){
 	gulp.watch('src/sass/**/*.{css,sass,scss}', gulp.parallel('compileSass'));
 	gulp.watch('src/js/common.js', gulp.parallel('compressJs'));
-	gulp.watch('src/**/*.{php,html}', gulp.parallel('code')).on('change', browserSync.reload);
+	gulp.watch('*.{php,html}', gulp.parallel('code')).on('change', browserSync.reload);
 }));
 
 // Default Gulp function
