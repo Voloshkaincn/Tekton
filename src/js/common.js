@@ -130,6 +130,9 @@ $(document).ready(function() {
 
 	$(".menu__btn").click(function(){ 
 	    $(this).toggleClass("menu__btn-active");
+	    $('.nav__link').on('click', function(){
+	    		$(".menu__btn").removeClass('menu__btn-active');
+	    });
 	});
 
 	$('.dropdown').on('click', function(e){
@@ -148,6 +151,6 @@ $(document).ready(function() {
 	    e.stopPropagation();
 	    $(this).removeClass('dropdown-open');
 	  }
-	})
-
+	});
+ 
 });

@@ -446,7 +446,7 @@ label{
 .section{
 	padding-top: 84px;
 	@media(max-width: 991px){
-		padding-top: 2em;
+		padding-top: 4em;
 		height: auto !important;
 	}
 }
@@ -828,6 +828,9 @@ label{
 	flex-direction: column;
 	justify-content: center;
 	padding-bottom: 100px;
+	@media(max-width: 991px){
+		padding-bottom: 0;
+	}
 }
 .services{
 	&__row{
@@ -996,6 +999,9 @@ label{
 	color: #fff;
 	font-size: 30px;
 	cursor: pointer;
+	@media(max-width: 475px){
+			top: -7px;
+		}
 }
 .slick-prev{
 	left: 0;
@@ -1009,6 +1015,9 @@ label{
 		padding: 12px;
 		line-height: 4px;
 		cursor: pointer;
+		@media(max-width: 475px){
+			padding: 7px;
+		}
 		button {
 			color: transparent;
 			width: 4px;
@@ -1077,6 +1086,9 @@ label{
 	.slider__wrap{ 
 		padding: 20px 40px;
 		transition: all 0.5s;
+		@media(max-width: 991px){
+			padding: 20px 20px;
+		}
 		@media(max-width: 767px){
 			padding: 10px 20px;
 		}
@@ -1108,7 +1120,7 @@ label{
 	.slick-center .slider__desc{
 		opacity: 1;
 		white-space: normal;
-		margin-top: 18px;
+		margin-top: 10%;
 	}
 }
 .team{
@@ -1233,6 +1245,12 @@ label{
 	&__screen{
 		display: flex;
 		height: calc(100% - 80px);
+		@media(max-width: 991px){
+			height: 100%;
+		}
+		@media(max-height: 724px){
+			height: 100%;
+		}
 		@media(max-width: 767px){
 			flex-wrap: wrap;
 			height: auto;

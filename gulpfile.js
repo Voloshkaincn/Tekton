@@ -36,6 +36,7 @@ gulp.task('createJsLibs', function(){
 			'src/libs/fullPage.js-master/fullpage.min.js',
 			'src/libs/slick-1.8.1/slick/slick.min.js',
 			'src/libs/lightbox/dist/js/lightbox.min.js',
+			// 'src/libs/responsively-lazy/responsivelyLazy.min.js',
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglifyjs())

@@ -312,12 +312,12 @@ Template Name: main Page
 							<div class="slider__wrap">
 								<a class="slider__image" href="<?php echo wp_get_attachment_url($id);  ?>" data-lightbox="gallery" data-title="<?php echo wp_get_attachment_caption( $id);  ?>">
 									<img class="slider__img" 
-									srcset="<?php echo wp_get_attachment_thumb_url($id);?> 400w,
-									<?php echo wp_get_attachment_url($id);?>"
-									data-src="<?php echo wp_get_attachment_url($id);?>"
-								 	alt="<?php echo get_post_meta($id, '_wp_attachment_image_alt', true );  ?>"/>				
+									srcset="<?php echo wp_get_attachment_thumb_url($id);?> 991w,
+									<?php echo wp_get_attachment_image_url($id, 'medium');?> 1360w, <?php echo wp_get_attachment_image_url($id, 'large');?>"
+									src="<?php echo wp_get_attachment_url($id);?>"
+								 	alt="<?php echo get_post_meta($id, '_wp_attachment_image_alt', true );  ?>"/>			
 								</a>
-								<div class="slider__desc"><?php echo wp_get_attachment_caption( $id);  ?>"</div>
+								<div class="slider__desc"><?php echo wp_get_attachment_caption( $id);  ?></div>
 							</div>
 						</div>
 
@@ -783,7 +783,14 @@ Template Name: main Page
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/src/js/libs.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/src/js/common.min.js"></script> -->
-
+<script>
+    document.addEventListener( 'wpcf7mailsent', function( event ) {
+            var elements = document.querySelectorAll('.input-hoshi.focus');
+            for (i = 0; i < elements.length; i++){
+	            document.querySelector('.input-hoshi.focus').classList.remove('focus');
+	        }
+    }, false );
+</script>
 
 	<?php wp_footer(); ?>
 </body>
