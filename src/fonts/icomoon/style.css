@@ -1,12 +1,13 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?8e264m');
-  src:  url('fonts/icomoon.eot?8e264m#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?8e264m') format('truetype'),
-    url('fonts/icomoon.woff?8e264m') format('woff'),
-    url('fonts/icomoon.svg?8e264m#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?xb9vu5');
+  src:  url('fonts/icomoon.eot?xb9vu5#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?xb9vu5') format('truetype'),
+    url('fonts/icomoon.woff?xb9vu5') format('woff'),
+    url('fonts/icomoon.svg?xb9vu5#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -24,60 +25,69 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-up:before {
-  content: "\e905";
+.icon-search1:before {
+  content: "\e90d";
 }
-.icon-right:before {
-  content: "\e906";
+.icon-play_circle_filled:before {
+  content: "\e90c";
 }
-.icon-left:before {
-  content: "\e907";
+.icon-double_arrow_left:before {
+  content: "\e909";
 }
-.icon-down:before {
+.icon-double_arrow_right:before {
   content: "\e908";
 }
-.icon-902:before {
-  content: "\e902";
+.icon-close:before {
+  content: "\e907";
 }
-.icon-903:before {
-  content: "\e903";
-}
-.icon-904:before {
+.icon-search:before {
   content: "\e904";
 }
-.icon-912:before {
-  content: "\e912";
-}
-.icon-913:before {
-  content: "\e913";
-}
-.icon-914:before {
-  content: "\e914";
-}
-.icon-915:before {
-  content: "\e915";
-}
-.icon-916:before {
-  content: "\e916";
-}
-.icon-917:before {
-  content: "\e917";
-}
-.icon-918:before {
-  content: "\e918";
-}
-.icon-919:before {
-  content: "\e919";
-}
-.icon-901:before {
-  content: "\e901";
-}
-.icon-logo:before {
+.icon-facebook:before {
   content: "\e900";
 }
-.icon-facebook:before {
-  content: "\ea90";
+.icon-telegram:before {
+  content: "\e901";
 }
-.icon-instagram:before {
-  content: "\ea92";
+.icon-viber:before {
+  content: "\e903";
+}
+.icon-whatsapp:before {
+  content: "\e902";
+}
+.icon-up:before {
+  content: "\e906";
+}
+.icon-down:before {
+  content: "\e905";
+}
+.icon-spinner6:before {
+  content: "\e97f";
+}
+.icon-stop2:before {
+  content: "\ea1e";
+}
+.icon-youtube2:before {
+  content: "\ea9e";
+}
+.icon-point:before {
+  content: "\e90a";
+}
+.icon-home:before {
+  content: "\e90b";
+}
+.icon-spinner6:before {
+  content: "\e97f";
+}
+.icon-stop2:before {
+  content: "\ea1e";
+}
+.icon-youtube2:before {
+  content: "\ea9e";
+}
+.icon-quotes-left:before {
+  content: "\e977";
+}
+.icon-quotes-right:before {
+  content: "\e978";
 }

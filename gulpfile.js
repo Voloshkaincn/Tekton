@@ -33,10 +33,8 @@ gulp.task('compileSass', function(){
 //Concat all library js files into libs.min.js
 gulp.task('createJsLibs', function(){
 	return gulp.src([
-			'src/libs/fullPage.js-master/fullpage.min.js',
 			'src/libs/slick-1.8.1/slick/slick.min.js',
-			'src/libs/lightbox/dist/js/lightbox.min.js',
-			// 'src/libs/responsively-lazy/responsivelyLazy.min.js',
+			'src/libs/lightbox/dist/js/lightbox.min.js'
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglifyjs())
@@ -65,18 +63,19 @@ gulp.task('code', function(){
 });
 
 // LiveReload
-gulp.task('browserSync', function serverStart(){
-	browserSync.init({
-		proxy: "tekton.loc/"
-	});
+// gulp.task('browserSync', function serverStart(){
+// 	browserSync.init({
+// 		proxy: "./src/"
+// 	});
+// });
+// });
+gulp.task('browserSync', function() {
+    browserSync.init({
+       server: {
+            baseDir: "./"
+        }
+    });
 });
-// });
-// gulp.task('browserSync', function() {
-//     browserSync.init({
-//         watch: true,
-//     	server: "http://tekton/"
-//     });
-// });
 
 
 // Watch
